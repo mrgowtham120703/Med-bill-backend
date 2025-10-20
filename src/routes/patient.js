@@ -10,8 +10,8 @@ router.post('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     const p = await Patient.findById(req.params.id);
-    if(!p) 
-        return res.status(404).json({error: 'not found'});
+    if (!p)
+        return res.status(404).json({ error: 'not found' });
     res.json(p);
 });
 
