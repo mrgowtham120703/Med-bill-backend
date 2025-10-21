@@ -12,3 +12,11 @@ app.use(bodyParser.json());
 app.use(morgan('dev'));
 
 connectDB();
+
+// routes
+app.use('/api/providers', require('./src/routes/provider'));
+app.use('/api/patients', require('./src/routes/patient'));
+app.use('/api/claim', require('./src/routes/claim'));
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server Listening on ${PORT}`));

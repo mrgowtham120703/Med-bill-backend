@@ -32,4 +32,4 @@ module.exports = function claculateClaim(claim, insurance){
         patientResponsibility: patientResp,
         insurerResponsibility: insurerResp 
     }
-}
+};
